@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap");
+
+:root {
+  --theme-bg-color: rgba(16 18 27 / 40%);
+  --border-color: rgba(113 119 144 / 25%);
+  --theme-color: #f9fafb;
+  --inactive-color: rgb(113 119 144 / 78%);
+  --body-font: "Poppins", sans-serif;
+  --hover-menu-bg: rgba(12 15 25 / 30%);
+  --content-title-color: #999ba5;
+  --content-bg: rgb(146 151 179 / 13%);
+  --button-inactive: rgb(249 250 251 / 55%);
+  --dropdown-bg: #21242d;
+  --dropdown-hover: rgb(42 46 60);
+  --popup-bg: rgb(22 25 37);
+  --search-bg: #14162b;
+  --overlay-bg: rgba(36, 39, 59, 0.3);
+  --scrollbar-bg: rgb(1 2 3 / 40%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--inactive-color);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-bg);
+  border-radius: 10px;
+}
+
+.header {
+  border-bottom: 1px solid var(--border-color);
+  height: 58px;
+  padding: 0px 30px;
+}
+
+.header-l {
+  margin: 0;
+}
+
+.red-dot {
+  height: 14px;
+  width: 14px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.yellow-dot {
+  height: 14px;
+  width: 14px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.green-dot {
+  height: 14px;
+  width: 14px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.header-m2 img {
+  width: 15px;
+  height: auto;
+}
+
+.header-r .bell,
+.header-r .cloud {
+  width: 20px;
+  height: auto;
+}
+
+.header-r img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar {
+  position: sticky;
+  width: 240px;
+  max-height: calc(100vh - 58px);
+  overflow-y: scroll;
+  border-right: 1px solid var(--border-color);
+}
+
+.main-content {
+  width: calc(100% - 200px);
+
+  max-height: calc(100vh - 58px);
+  height: calc(100vh - 58px);
+  position: sticky;
+  top: 0px;
+  overflow: auto;
+}
+
+.content {
+  padding: 20px 40px;
+  background-color: var(--theme-bg-color);
+}
+
+.active {
+  color: var(--theme-color);
+  border-bottom: 2px solid var(--theme-color) !important;
+}
+
+.item a {
+  padding: 10px;
+  color: var(--theme-color);
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.main .sidebar .item a:hover {
+  background-color: var(--hover-menu-bg);
+}
+
+.item svg {
+  margin-right: 8px;
+  width: 16px;
+  color: var(--theme-color);
+}
+
+.inside-header {
+  height: 58px;
+  border-bottom: 1px solid var(--border-color);
+
+  position: sticky;
+  top: 0;
+}
+
+.content-banner {
+  background-image: url(https://www.transparenttextures.com/patterns/cubes.png),
+    linear-gradient(
+      to right top,
+      #cf4af3,
+      #e73bd7,
+      #f631bc,
+      #fd31a2,
+      #ff3a8b,
+      #ff4b78,
+      #ff5e68,
+      #ff705c,
+      #ff8c51,
+      #ffaa49,
+      #ffc848,
+      #ffe652
+    );
+  padding: 20px 40px;
+  color: var(--theme-color);
+}
+
+.content-banner svg {
+  width: 24px;
+  margin-right: 14px;
+}
+
+.content-plans-box {
+  padding: 20px;
+  color: var(--theme-color);
+  background-color: var(--content-bg);
+  border-radius: 14px;
+  border: 1px solid var(--theme-bg-color);
+  transition: 0.3s ease;
+}
+
+.content-plans-box:hover {
+  transform: scale(1.02);
+  background-color: var(--theme-bg-color);
+}
+
+.content-plans-box svg {
+  width: 28px;
+}
+
+.box-content {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cotnet-menu {
+  background-color: var(--content-bg);
+  border-radius: 14px;
+  border: 1px solid var(--theme-bg-color);
+  color: var(--theme-color);
+  font-size: 16px;
+}
+
+.intalled-menu {
+  padding: 10px 18px;
+}
+
+.intalled-menu svg {
+  width: 28px;
+  margin-right: 16px;
+  border-radius: 6px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.status {
+  margin-left: auto;
+  width: 140px;
+  font-size: 15px;
+  position: relative;
+}
+
+.installed-circle {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: -18px;
+}
+
+.menu-icon {
+  width: 5px;
+  height: 5px;
+  background-color: var(--button-inactive);
+  border-radius: 50%;
+  box-shadow: 7px 0 0 0 var(--button-inactive),
+    14px 0 0 0 var(--button-inactive);
+  margin: 0 12px;
+}
+
+.inactive-button {
+  color: var(--button-inactive);
+  border: 1px solid var(--button-inactive);
+  background-color: none;
+}
+
+.header div,
+.inside-header div {
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.header .header-m1 div:hover,
+.inside-header .inside-header-r div:hover {
+  color: var(--theme-color);
+  border-bottom: 2px solid var(--theme-color);
+}
+
+.content-installed .cotnet-menu .intalled-menu:hover {
+  background-color: var(--theme-bg-color);
+}
+
+.notification {
+  position: relative;
+  border-radius: 50%;
+  background-color: #3a6df0;
+}
+
+.updates {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  margin-left: auto;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
